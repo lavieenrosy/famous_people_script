@@ -27,7 +27,7 @@ client.query('SELECT * FROM famous_people WHERE first_name = $1', [process.argv[
     }
 
     for (let i = 0; i < result.rows.length; i++) {
-      console.log(`${result.rows[i].first_name} ${result.rows[i].last_name}, born '${parseDate(result.rows[i].birthdate)}'`);
+      console.log(`- ${result.rows[i].first_name} ${result.rows[i].last_name}, born '${parseDate(result.rows[i].birthdate)}'`);
     }
     client.end();
   });
